@@ -28,7 +28,7 @@ adminRoutes.post("/add-category",verifyToken,addCategory)
 adminRoutes.post("/delete-category/:id",verifyToken,deleteCategory)
 adminRoutes.post("/update-category/:id",verifyToken,updateCategory)
 adminRoutes.get("/get-single-category/:id",verifyToken,getSingleCategory)
-adminRoutes.get("/get-category",verifyToken,getCategory)
+adminRoutes.get("/get-category",getCategory)
 
 //SUBCATEGORY-->
 adminRoutes.post("/add-subcategory",addSubcategory)
