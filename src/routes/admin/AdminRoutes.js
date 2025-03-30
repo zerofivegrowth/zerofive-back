@@ -24,10 +24,10 @@ adminRoutes.post("/active-deactive-product/:id",verifyToken,activeDeactiveProduc
 adminRoutes.post("/add-product",verifyToken,productUploadStorage.fields([{ name: 'thumbnail', maxCount: 1 }, { name: 'product_img', maxCount: 10 }]),addProduct) //token header auth 
 
 //CATEGORY-->
-adminRoutes.post("/add-category",verifyToken,addCategory)
-adminRoutes.post("/delete-category/:id",verifyToken,deleteCategory)
-adminRoutes.post("/update-category/:id",verifyToken,updateCategory)
-adminRoutes.get("/get-single-category/:id",verifyToken,getSingleCategory)
+adminRoutes.post("/add-category",addCategory)
+adminRoutes.post("/delete-category/:id",deleteCategory)
+adminRoutes.post("/update-category/:id",updateCategory)
+adminRoutes.get("/get-single-category/:id",getSingleCategory)
 adminRoutes.get("/get-category",getCategory)
 
 //SUBCATEGORY-->
